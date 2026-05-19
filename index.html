@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AI Review Quiz | Pages 134-177</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <section class="topbar" aria-label="Review overview">
+        <div>
+          <p class="eyebrow">PPT Pages 134-177</p>
+          <h1>AI Review Quiz</h1>
+          <p class="subtitle">Multiple-choice review questions generated from pages 134 to 177 of your PDF. Choose an answer to get instant feedback and explanations.</p>
+        </div>
+        <div class="score-panel" aria-live="polite">
+          <div class="score-ring" id="scoreRing">
+            <span id="scorePercent">0%</span>
+          </div>
+          <div>
+            <strong id="scoreText">0 / 0</strong>
+            <span>Current accuracy</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="workspace">
+        <aside class="sidebar" aria-label="Question navigation">
+          <div class="stat-grid">
+            <div>
+              <span id="answeredCount">0</span>
+              <label>Answered</label>
+            </div>
+            <div>
+              <span id="correctCount">0</span>
+              <label>Correct</label>
+            </div>
+            <div>
+              <span id="wrongCount">0</span>
+              <label>Wrong</label>
+            </div>
+          </div>
+
+          <div class="filters" role="group" aria-label="Question categories">
+            <button class="filter is-active" data-filter="all" type="button">All</button>
+            <button class="filter" data-filter="AI and Jobs" type="button">Jobs</button>
+            <button class="filter" data-filter="Reskilling and Policy" type="button">Policy</button>
+            <button class="filter" data-filter="AI Marketing" type="button">Marketing</button>
+            <button class="filter" data-filter="wrong" type="button">Wrong</button>
+          </div>
+
+          <div class="question-map" id="questionMap"></div>
+
+          <button class="ghost-button" id="resetButton" type="button">Reset Progress</button>
+        </aside>
+
+        <section class="quiz-card" aria-live="polite">
+          <div class="progress-track">
+            <div id="progressBar"></div>
+          </div>
+
+          <div class="question-meta">
+            <span id="questionNumber">Question 1</span>
+            <span id="sourcePage">Page 134</span>
+            <span id="categoryTag">AI and Jobs</span>
+          </div>
+
+          <h2 id="questionText"></h2>
+          <div class="options" id="options"></div>
+
+          <div class="feedback" id="feedback" hidden></div>
+
+          <div class="actions">
+            <button class="secondary-button" id="prevButton" type="button">Previous</button>
+            <button class="primary-button" id="nextButton" type="button">Next</button>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="./data/questions.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
